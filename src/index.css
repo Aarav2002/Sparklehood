@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 0.2s ease-in-out;
+  }
+  
+  .animate-slideIn {
+    animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-scaleIn {
+    animation: scaleIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hover-card {
+    @apply transition-all duration-200 hover:shadow-lg hover:border-blue-100 hover:bg-blue-50/30;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+html {
+  @apply antialiased;
+}
+
+body {
+  @apply text-gray-800 bg-gray-50;
+}
+
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white;
+}
+
+.button-base {
+  @apply transition-all duration-150 focus-ring disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.button-primary {
+  @apply button-base bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800;
+}
+
+.button-secondary {
+  @apply button-base bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 active:bg-gray-100;
+}
+
+.input-base {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus-ring placeholder-gray-400;
+}
