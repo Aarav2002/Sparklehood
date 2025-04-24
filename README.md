@@ -2,6 +2,8 @@
 
 A modern, responsive dashboard for tracking and managing AI safety incidents across your organization. Built with React, TypeScript, and Tailwind CSS.
 
+Live Link - https://sparklehood.vercel.app/
+
 ![Dashboard Preview](https://images.pexels.com/photos/7567444/pexels-photo-7567444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
 
 ## Features
